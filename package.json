@@ -1,14 +1,14 @@
 {
-  "name": "aura-to-react",
-  "version": "1.0.0",
-  "description": "",
+  "name": "salesforce-aura-react",
+  "version": "0.0.1",
+  "description": "Salesforce Aura implementation based on React",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "peerDependencies": {
     "react": ">=16.8.0"
   },
