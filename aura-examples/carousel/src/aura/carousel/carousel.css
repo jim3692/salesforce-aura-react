@@ -1,0 +1,29 @@
+.THIS .container {
+    border: 2px solid black;
+    padding: 0.1rem;
+
+    display: flex;
+    justify-content: space-around;
+
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.THIS .container:first-child {
+    margin-top: 0.5rem;
+}
+
+.THIS .container.upper button {
+    width: 6rem;
+    margin: auto;
+}
+
+.THIS .container.upper img {
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.THIS .container.lower img {
+    object-fit: contain;
+}

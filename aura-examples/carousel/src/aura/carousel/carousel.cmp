@@ -1,0 +1,25 @@
+<aura:component>
+    <aura:attribute name="images" type="String[]" />
+    <aura:attribute name="currentImageIdx" type="Integer" default="0" />
+    <aura:attribute name="currentImage" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+
+    <div>
+        <aura:if isTrue="{! v.currentImage }">
+            <div class="container upper">
+                <button onclick="{! c.handlePreviousClick }">Previous</button>
+                <img src="{! $Resource.carousel + v.currentImage }" width="500" />
+                <button onclick="{! c.handleNextClick }">Next</button>
+            </div>
+        </aura:if>
+
+        <aura:if isTrue="{! and(v.images, v.images.length) }">
+            <div class="container lower">
+                <aura:iteration items="{! v.images }" var="img" indexVar="imgIdx">
+                    <img src="{! $Resource.carousel + img }" width="100" data-idx="{! imgIdx }"
+                        onclick="{! c.handleImageClick }" />
+                </aura:iteration>
+            </div>
+        </aura:if>
+    </div>
+</aura:component>

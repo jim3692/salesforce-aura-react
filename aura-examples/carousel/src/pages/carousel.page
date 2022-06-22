@@ -1,0 +1,18 @@
+<apex:page>
+    <apex:includeLightning/>
+    <div id="carousel"></div>
+
+    <script type="text/javascript">
+        $Lightning.use(
+            "c:carouselOut",
+            function() {
+                $Lightning.createComponent(
+                    "c:carousel", 
+                    {},
+                    "carousel",
+                    function(cmp) {}
+                );
+            }
+        );
+    </script>
+</apex:page>
